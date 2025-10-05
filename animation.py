@@ -83,8 +83,17 @@ frames = [
 ]
 
 
-while True:
-    for frame in frames:
+def animate(delay=0.2, loop=True):
+    try:
+        while True:
+            for frame in frames:
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print(frame)
+                time.sleep(delay)
+            if not loop:
+                break
+    except KeyboardInterrupt:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print(frame)
-        time.sleep(0.2)
+        print("animation interrupted")
+
+animate()
