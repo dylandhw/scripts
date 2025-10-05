@@ -27,7 +27,8 @@ def check_internet(url="https://www.google.com", timeout=5):
 
 def googleTTS():
     text = "hello world. google text-to-speech has given me life!"
-    tts = gTTS(text)
+    sentencesJoined = " ".join(sentences)
+    tts = gTTS(text=sentencesJoined, lang='en', tld='com', slow=True)
     tts.save("hello.mp3")
     os.system("mpg123 hello.mp3")
 
@@ -40,11 +41,11 @@ def localTTS():
 
 
 def main():
-    #if check_internet():
-    #    googleTTS()
-    #else:
-    #    localTTS()
-    localTTS()
+    if check_internet():
+        googleTTS()
+    else:
+        localTTS()
+    
 
 if __name__ == "__main__":
     main()
