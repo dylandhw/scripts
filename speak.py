@@ -29,8 +29,10 @@ def localTTS():
     """
     words = text.split()
     engine = pyttsx3.init()
-    engine.say("hello, world. python has given me life!")
-    engine.runAndWait()
+    for word in words:
+        engine.say(word)
+        time.sleep(0.2)
+        engine.runAndWait()
 
 def main():
     #if check_internet():
