@@ -192,19 +192,18 @@ frames = [
     """
 ]
 
-
+red_color = (
+    (136, 8, 8),
+    (170,74, 68),
+    (165, 42, 42),
+    (128, 0, 32),
+    (139, 0, 0),
+    (165, 42, 42)
+)
 
 def animate(delay=0.2, loop=True):
     try:
         while True:
-            red_color = (
-                (136, 8, 8),
-                (170,74, 68),
-                (165, 42, 42),
-                (128, 0, 32),
-                (139, 0, 0),
-                (165, 42, 42)
-            )
             os.system('cls' if os.name == 'nt' else 'clear')
             cprint(random.choice(frames), random.choice(red_color))
             time.sleep(delay)
