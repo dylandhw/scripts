@@ -1,5 +1,6 @@
 import os
 import time 
+import random
 
 frames = [
     """
@@ -86,12 +87,9 @@ frames = [
 def animate(delay=0.2, loop=True):
     try:
         while True:
-            for frame in frames:
-                os.system('cls' if os.name == 'nt' else 'clear')
-                print(frame)
-                time.sleep(delay)
-            if not loop:
-                break
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print(print(random.choice(frames)))
+            time.sleep(delay)
     except KeyboardInterrupt:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("animation interrupted")
