@@ -21,7 +21,7 @@ end
 macro timed(ex)
     quote
         local t0 = time()
-        local result = $(esx(ex))
+        local result = $(esc(ex))
         println("time:" , round(time() - t0, digits=4), "s")
         result
     end 
