@@ -21,3 +21,12 @@ void duffsDevice(char *to, char *from, int count)
                 } while (--n > 0);
     }
 }
+
+int main()
+{
+    char src[] = "some dummy string";
+    char dest[50];
+
+    printf("source:  \"%s\"", src);
+
+}
