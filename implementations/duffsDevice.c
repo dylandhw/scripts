@@ -33,4 +33,10 @@ int main()
 
     printf("destination:  \"%s\"", dest);
 
+    if(strcmp(src, dest) == 0)
+        printf("success");
+    else
+        printf("failure");
+
+    return 0;
 }
