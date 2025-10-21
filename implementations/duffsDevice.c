@@ -29,4 +29,8 @@ int main()
 
     printf("source:  \"%s\"", src);
 
+    duffsDevice(dest, src, strlen(src) + 1);
+
+    printf("destination:  \"%s\"", dest);
+
 }
